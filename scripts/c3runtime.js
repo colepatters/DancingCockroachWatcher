@@ -555,6 +555,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.sliderbar,
 		C3.Plugins.Browser,
 		C3.Plugins.Touch,
+		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.System.Acts.LoadState,
 		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.video.Cnds.HasEnded,
 		C3.Plugins.System.Cnds.TriggerOnce,
@@ -679,6 +681,7 @@ self.C3_JsPropNameTable = [
 	}
 
 	self.C3_ExpressionFuncs = [
+		() => "save",
 		() => "Default",
 		() => 1,
 		() => "",
@@ -693,8 +696,7 @@ self.C3_JsPropNameTable = [
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
 		},
-		() => 5,
-		() => "save"
+		() => 5
 	];
 }
 
